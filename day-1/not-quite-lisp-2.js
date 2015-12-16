@@ -10,8 +10,8 @@ function basement_at(directions) {
   return -1 // Basements are scary anyway
 }
 
-// Alternative solution!
-const basement_at = directions =>
+// Less efficient one-liner solution. (Expanded for clarity.)
+const basement_at_v2 = directions =>
   [...directions].reduce((floors, dir, i) =>
                            [...floors, floors[i] + dir === '(' ? 1 : -1]
                          , [0])
